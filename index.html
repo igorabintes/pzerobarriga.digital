@@ -38,6 +38,37 @@
       }
     </style>
     
+    <style type="text/css">
+      nav {
+        background-color: #BF0A0A;
+        color: white;
+      }
+      .fsec {
+        background-color: #FCFCFC;
+      }
+      .fsec h1 {
+        color: #4F5AEA;
+      }
+      .fsec h4 {
+        color: #636E72;
+      }
+      .ssec {
+        background-color: #EEEEEE;
+      }
+      .btn {
+        font-size: 200%;
+        font-family: 'Oswald', sans-serif;
+        white-space: normal;
+      }
+    </style>
+    
+    <nav class="navbar justify-content-center text-center">
+      <span class="lead">
+        <i class="fas fa-exclamation-triangle mr-2"></i>ATENÇÃO: Este vídeo será removido no dia <span id="dia"></span> de <span id="mes"></span>, aproveite enquanto está disponível!
+      </span>
+    </nav>
+
+    
     <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -436,6 +467,20 @@ src="https://www.facebook.com/tr?id=877693406712112&ev=PageView&noscript=1"
         </div>
       </div>
     </footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+      monName = new Array ("janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro")
+
+      var data = new Date();
+      var dia = data.getDate();
+      var mes = monName[data.getMonth()];
+
+      document.getElementById("dia").innerHTML = dia
+      document.getElementById("mes").innerHTML = mes
+    </script>
 
     <script type="text/javascript">
       setTimeout(() => {document.getElementById("cta1").classList.remove("d-none"); document.getElementById("cta2").classList.remove("d-none")}, 1740000); // temporização da Call to Action (em milissegundos)
